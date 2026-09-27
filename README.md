@@ -1,59 +1,234 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hissaab — Expense & Record Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Hissaab** is a modern expense and record management application designed to help users maintain and organize their financial activities in one place.
 
-## About Laravel
+The application allows users to keep track of money received, money spent, transactions, and other important financial records through a structured and easy-to-use system.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Project Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Managing daily expenses and financial records manually can become difficult as the number of transactions increases.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Hissaab** aims to simplify this process by providing a centralized platform where users can record, manage, and monitor their financial activities efficiently.
 
-## Learning Laravel
+The project is being developed with a scalable architecture so that additional features and a dedicated frontend can be integrated easily in the future.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Key Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* 🔐 User Registration & Authentication
+* 👤 User Profile Management
+* 💰 Record Income / Money Received
+* 💸 Record Expenses / Money Spent
+* 📊 Expense & Transaction Management
+* 👥 Group-based Record Management
+* 📝 Create, Update & Delete Records
+* 🔎 Organized Financial Data
+* 🔒 API-based Authentication
+* 📱 Backend architecture ready for frontend integration
+* ⚡ RESTful API architecture
+* 🗄️ MySQL database integration
 
-## Laravel Sponsors
+## 🛠️ Tech Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Backend
 
-### Premium Partners
+* PHP
+* Laravel
+* Laravel Sanctum
+* RESTful APIs
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Database
 
-## Contributing
+* MySQL
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Development Environment
 
-## Code of Conduct
+* XAMPP
+* Composer
+* Git & GitHub
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Frontend
 
-## Security Vulnerabilities
+A separate frontend application can be integrated with the backend APIs. The architecture is designed to support modern frontend technologies such as React.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🏗️ Project Architecture
 
-## License
+The project follows a backend API architecture where the Laravel application handles:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Authentication
+* Business logic
+* Database operations
+* User management
+* Group management
+* Expense and transaction management
+* API responses
+
+A separate frontend can consume these APIs and provide the user interface.
+
+```text
+Hissaab
+│
+├── Backend
+│   ├── Authentication
+│   ├── Users
+│   ├── Groups
+│   ├── Transactions
+│   ├── Expenses
+│   └── REST APIs
+│
+└── Frontend
+    └── React / Modern Web UI
+```
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/GauravMishra29/YOUR-REPOSITORY-NAME.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd YOUR-REPOSITORY-NAME
+```
+
+### 3. Install Dependencies
+
+```bash
+composer install
+```
+
+### 4. Create Environment File
+
+```bash
+cp .env.example .env
+```
+
+For Windows PowerShell:
+
+```powershell
+copy .env.example .env
+```
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Configure Database
+
+Update the database configuration in `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 7. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Start the Laravel Development Server
+
+```bash
+php artisan serve
+```
+
+The application will be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+## 🔑 API Authentication
+
+Hissaab uses **Laravel Sanctum** for API authentication.
+
+Authenticated users can access protected endpoints using an authentication token.
+
+Example:
+
+```http
+Authorization: Bearer YOUR_TOKEN
+```
+
+## 📂 Main Modules
+
+| Module         | Description                                   |
+| -------------- | --------------------------------------------- |
+| Authentication | Registration, login and logout                |
+| Users          | User account and profile management           |
+| Groups         | Create and manage groups                      |
+| Group Members  | Manage users within groups                    |
+| Transactions   | Track financial activities                    |
+| Expenses       | Record and manage spending                    |
+| API            | Communication layer for frontend applications |
+
+## 🔮 Future Enhancements
+
+The project can be extended with:
+
+* 📊 Advanced financial dashboard
+* 📈 Expense analytics and charts
+* 🔔 Notifications
+* 📅 Monthly & yearly expense reports
+* 💳 Payment integration
+* 📤 PDF / Excel reports
+* 🔍 Advanced filtering and search
+* 👨‍👩‍👧 Group expense splitting
+* 📱 Mobile-friendly interface
+* 🤖 Smart expense insights
+* React-based frontend application
+
+## 🎯 Project Goals
+
+The primary goals of Hissaab are to:
+
+* Simplify personal and group expense management
+* Maintain organized financial records
+* Reduce manual record keeping
+* Provide a reliable API-driven architecture
+* Build a scalable foundation for future financial management features
+
+## 📌 Project Status
+
+**Currently in Development**
+
+The backend API is being developed using Laravel, with additional modules and frontend integration planned for future releases.
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+If you would like to contribute:
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Commit your changes
+5. Push the branch
+6. Open a Pull Request
+
+## 📄 License
+
+This project is developed for learning, development, and portfolio purposes.
+
+---
+
+### 👨‍💻 Developer
+
+**Gaurav Mishra**
+
+GitHub: `https://github.com/GauravMishra29`
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star.
